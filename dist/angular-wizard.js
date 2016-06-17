@@ -18,7 +18,7 @@ angular.module("wizard.html", []).run(["$templateCache", function($templateCache
     "    <div class=\"steps\" ng-transclude></div>\n" +
     "    <ul class=\"steps-indicator steps-{{steps.length}}\" ng-if=\"!hideIndicators\">\n" +
     "      <li ng-class=\"{default: !step.completed && !step.selected, current: step.selected && !step.completed, done: step.completed && !step.selected, editing: step.selected && step.completed}\" ng-repeat=\"step in steps\">\n" +
-    "        <a>{{step.title || step.wzTitle}}</a>\n" +
+    "        <a><span class='step-title'>{{step.title || step.wzTitle}}</span></a>\n" +
     "      </li>\n" +
     "    </ul>\n" +
     "</div>\n" +
